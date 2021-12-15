@@ -16,6 +16,10 @@ code {
     monospace;
 }
 
+.user-container {
+  margin-top: 140px;
+}
+
 .hex {
   display: block;
   margin: 0 auto;

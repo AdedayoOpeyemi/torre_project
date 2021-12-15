@@ -1,4 +1,4 @@
-import React, { } from 'react';
+import React from 'react';
 
 function skillButton(buttonDetails) {
   const {id, name,} = buttonDetails

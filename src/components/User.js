@@ -52,8 +52,24 @@ function User() {
   }, [])
 
 
+//  async displayModal(skillId) {
+//     const showResponse = await fetch(`https://api.tvmaze.com/shows/${showIndex}`);
+//     const showJson = await showResponse.json();
+//     const epResponse = await fetch(`https://api.tvmaze.com/shows/${showIndex}/episodes`);
+//     const epJson = await epResponse.json();
+//     const episodes = epJson.length;
+//     const genresArray = showJson.genres;
+//     const genres = genresArray.join(', ');
+//     const imgUrl = showJson.image.original;
+//     const title = showJson.name;
+//     const { status } = showJson;
+//     const { summary } = await showJson;
+//     UI.#privateTest(imgUrl, title, genres, episodes, status, summary);
+//     UI.#privateCloseModal();
+//   }
+
   return (
-    <div>
+    <div className="user-container">
       <div className="d-flex flex-column">
         <div className="primary-user-details">
 
