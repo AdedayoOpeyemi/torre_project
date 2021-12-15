@@ -1,18 +1,12 @@
 import React from 'react';
 
-function skillButton(buttonDetails) {
-  const {id, name,} = buttonDetails
-
-  const getSkillDetails = (e) => {
-    const skillId = e.target.id
-  }
-
+function SkillButton(props) {
 
   return (
-    <button id={id} onSubmit={getSkillDetails}>
-      {name}
+    <button id={props.id} >
+      {props.name}
     </button>
   )
 }
 
-export default skillButton
+export default SkillButton

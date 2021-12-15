@@ -84,3 +84,9 @@ code {
 .btn-group button:hover {
   background-color: rgb(150,151,152)
 }
+
+.prof-section {
+  max-width: 400px;
+  margin-right: auto;
+  margin-left: auto;
+}
