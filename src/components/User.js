@@ -11,7 +11,7 @@ function User() {
 
   useEffect(() => {
     async function fetchUserData () {
-      const res = await fetch('/api/bios/torrenegra');
+      const res = await fetch('https://bio.torre.co/api/bios/torrenegra');
       const data = await res.json();
       console.log(data)
       // console.log(data.person)
@@ -33,13 +33,13 @@ function User() {
             </div>
           </div>
           
-          <h4>Name: {userData && userData.person.name}</h4>
+          <h3>Name: {userData && userData.person.name}</h3>
         </div>
         <div className="secondary-user-details">
           <h6>Skills and Interests</h6>
 
           <div className="prof-section">
-            <h6>Master / Influencer</h6>
+            <h4>Master / Influencer</h4>
               <div className="btn-group d-flex flex-row">
               {userData && userData.strengths.map((strength) => (
        strength.proficiency === 'master' && <SkillButton key={strength.id} name={strength.name} /> 
@@ -49,7 +49,7 @@ function User() {
           </div>
 
           <div className="prof-section">
-            <h6>Proficient</h6>
+            <h4>Proficient</h4>
 
             <div class="btn-group d-flex flex-row">
             {userData && userData.strengths.map((strength) => (
