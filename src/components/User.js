@@ -55,11 +55,60 @@ function User() {
   return (
     <div>
       <div className="d-flex flex-column">
-        <div>
+        <div className="primary-user-details">
 
+          <div class="hex">
+            <div class="hex-background">
+            <img src="https://images.freeimages.com/images/large-previews/4d6/chugh-1171409.jpg" alt="Obama" className="user_image1" />
+            </div>
+          </div>
+          <img src="https://images.freeimages.com/images/large-previews/4d6/chugh-1171409.jpg" alt="Obama" className="user_image" style={{ width: '200px'}} />
+          <h4>President Barrack Obama</h4>
         </div>
-        <div>
-          
+        <div classname="secondary-user-details">
+          <h6>Skills and Interests</h6>
+
+          <div className="prof-section">
+            <h6>Master/Influencer</h6>
+              <div class="btn-group d-flex flex-row">
+                <button>Apple</button>
+                <button>Samsung</button>
+                <button>Sony</button>
+                <button>Sony</button>
+                <button>Apple</button>
+                {/* <button>Samsung</button> */}
+              </div>
+
+          </div>
+
+          <div className="prof-section">
+            <h6>Proficient</h6>
+
+            <div class="btn-group d-flex flex-row">
+                <button>Apple</button>
+                <button>Samsung</button>
+                <button>Sony</button>
+                <button>Sony</button>
+                <button>Apple</button>
+                {/* <button>Samsung</button> */}
+              </div>
+
+          </div>
+
+          <div className="prof-section">
+            <h6>NNovice</h6>
+
+            <div class="btn-group d-flex flex-row">
+                <button>Apple</button>
+                <button>Samsung</button>
+                <button>Sony</button>
+                <button>Sony</button>
+                <button>Apple</button>
+                {/* <button>Samsung</button> */}
+              </div>
+
+          </div>
+
         </div>
       </div>
     </div>
