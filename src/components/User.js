@@ -2,40 +2,11 @@ import React, {useEffect, useState } from 'react';
 
 function User() {
   const [userData, setUserData] = useState(null);
+  const [modalOpen, setModal] = useState(false)
 
-  // const fetchUserData = () => async () => {
-  //   const res = await fetch('https://bio.torre.co/api/bios/oyelesiopeyemi');
-  //   const data = await res.json();
-  //   setUser(data)
-  // };
-//   var requestOptions = {
-//   method: 'GET',
-//   redirect: 'follow'
-// };
+  const openModal = () => setModal({ modalOpen: true });
+  const closeModal = () => setModal({ modalOpen: false });
 
-
-
-  // useEffect(() => {
-  //   async function fetchUserData() {
-  //    fetch("https://bio.torre.co/api/bios/oyelesiopeyemi", requestOptions)
-  //     .then(response => response.text())
-  //     .then(result => console.log(result))
-  //     .then(result => setUser(result))
-  //     .catch(error => console.log('error', error));
-  //     // setUser(data)
-  //   }
-  //   fetchUserData();
-  // },[user]);
-  
-  // useEffect(() => {
-  //   const fetchUserData = () => async () => {
-  //     const res = await fetch('https://bio.torre.co/api/bios/oyelesiopeyemi');
-  //     const data = await res.json();
-  //     setUser(data)
-  //   };
-
-  //   fetchUserData();
-  // },[user])
 
   useEffect(() => {
     async function fetchUserData () {
@@ -43,30 +14,12 @@ function User() {
       const data = await res.json();
       console.log(data)
       // console.log(data.person)
-      setUserData(data)
-      console.log(userData)
+      setUserData(data);
       // return null
     };
 
     fetchUserData();
   }, [])
-
-
-//  async displayModal(skillId) {
-//     const showResponse = await fetch(`https://api.tvmaze.com/shows/${showIndex}`);
-//     const showJson = await showResponse.json();
-//     const epResponse = await fetch(`https://api.tvmaze.com/shows/${showIndex}/episodes`);
-//     const epJson = await epResponse.json();
-//     const episodes = epJson.length;
-//     const genresArray = showJson.genres;
-//     const genres = genresArray.join(', ');
-//     const imgUrl = showJson.image.original;
-//     const title = showJson.name;
-//     const { status } = showJson;
-//     const { summary } = await showJson;
-//     UI.#privateTest(imgUrl, title, genres, episodes, status, summary);
-//     UI.#privateCloseModal();
-//   }
 
   return (
     <div className="user-container">
@@ -79,7 +32,7 @@ function User() {
             </div>
           </div>
           
-          <h4>President Barrack Obama</h4>
+          <h4>Name: {userData && userData.person.name}</h4>
         </div>
         <div className="secondary-user-details">
           <h6>Skills and Interests</h6>
@@ -128,6 +81,15 @@ function User() {
         </div>
       </div>
     </div>
+
+// <div
+// className="d-flex align-items-center justify-content-center"
+// style={{ height: "100vh" }}
+// >
+// <Button id={id} onClick={this.openModal}>
+//   Launch demo modal
+// </Button>
+// </div>
   );
 }
 
