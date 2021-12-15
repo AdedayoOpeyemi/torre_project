@@ -1,4 +1,5 @@
 import React, {useEffect, useState } from 'react';
+import SkillButton from './SkillButon'
 
 function User() {
   const [userData, setUserData] = useState(null);
@@ -10,7 +11,7 @@ function User() {
 
   useEffect(() => {
     async function fetchUserData () {
-      const res = await fetch('/api/bios/oyelesiopeyemi');
+      const res = await fetch('/api/bios/torrenegra');
       const data = await res.json();
       console.log(data)
       // console.log(data.person)
@@ -38,14 +39,11 @@ function User() {
           <h6>Skills and Interests</h6>
 
           <div className="prof-section">
-            <h6>Master/Influencer</h6>
+            <h6>Master / Influencer</h6>
               <div className="btn-group d-flex flex-row">
-                <button>Apple</button>
-                <button>Samsung</button>
-                <button>Sony</button>
-                <button>Sony</button>
-                <button>Apple</button>
-                {/* <button>Samsung</button> */}
+              {userData && userData.strengths.map((strength) => (
+       strength.proficiency === 'master' && <SkillButton key={strength.id} name={strength.name} /> 
+    ))}
               </div>
 
           </div>
@@ -54,12 +52,9 @@ function User() {
             <h6>Proficient</h6>
 
             <div class="btn-group d-flex flex-row">
-                <button>Apple</button>
-                <button>Samsung</button>
-                <button>Sony</button>
-                <button>Sony</button>
-                <button>Apple</button>
-                {/* <button>Samsung</button> */}
+            {userData && userData.strengths.map((strength) => (
+       strength.proficiency === 'proficient' && <SkillButton key={strength.id} name={strength.name} /> 
+    ))}
               </div>
 
           </div>
@@ -68,12 +63,9 @@ function User() {
             <h6>Novice</h6>
 
             <div className="btn-group d-flex flex-row">
-                <button>Apple</button>
-                <button>Samsung</button>
-                <button>Sony</button>
-                <button>Sony</button>
-                <button>Apple</button>
-                {/* <button>Samsung</button> */}
+            {userData && userData.strengths.map((strength) => (
+       strength.proficiency === 'no-experience-interested' && <SkillButton key={strength.id} name={strength.name} /> 
+    ))}
               </div>
 
           </div>
