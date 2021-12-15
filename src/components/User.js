@@ -45,7 +45,7 @@ function User() {
       // console.log(data.person)
       setUserData(data)
       console.log(userData)
-      return null
+      // return null
     };
 
     fetchUserData();
@@ -73,20 +73,20 @@ function User() {
       <div className="d-flex flex-column">
         <div className="primary-user-details">
 
-          <div class="hex">
-            <div class="hex-background">
+          <div className="hex">
+            <div className="hex-background">
             <img src="https://images.freeimages.com/images/large-previews/4d6/chugh-1171409.jpg" alt="Obama" className="user_image1" />
             </div>
           </div>
           
           <h4>President Barrack Obama</h4>
         </div>
-        <div classname="secondary-user-details">
+        <div className="secondary-user-details">
           <h6>Skills and Interests</h6>
 
           <div className="prof-section">
             <h6>Master/Influencer</h6>
-              <div class="btn-group d-flex flex-row">
+              <div className="btn-group d-flex flex-row">
                 <button>Apple</button>
                 <button>Samsung</button>
                 <button>Sony</button>
@@ -114,7 +114,7 @@ function User() {
           <div className="prof-section">
             <h6>Novice</h6>
 
-            <div class="btn-group d-flex flex-row">
+            <div className="btn-group d-flex flex-row">
                 <button>Apple</button>
                 <button>Samsung</button>
                 <button>Sony</button>
