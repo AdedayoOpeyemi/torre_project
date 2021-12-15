@@ -62,7 +62,7 @@ function User() {
             <img src="https://images.freeimages.com/images/large-previews/4d6/chugh-1171409.jpg" alt="Obama" className="user_image1" />
             </div>
           </div>
-          <img src="https://images.freeimages.com/images/large-previews/4d6/chugh-1171409.jpg" alt="Obama" className="user_image" style={{ width: '200px'}} />
+          
           <h4>President Barrack Obama</h4>
         </div>
         <div classname="secondary-user-details">
@@ -96,7 +96,7 @@ function User() {
           </div>
 
           <div className="prof-section">
-            <h6>NNovice</h6>
+            <h6>Novice</h6>
 
             <div class="btn-group d-flex flex-row">
                 <button>Apple</button>
